@@ -15,5 +15,7 @@
 		Ilya Nemihin
 	</author>
 
+  <icon src="icon.png" gap:role="default" />
+
 	<preference name="orientation" value="portrait" />
 </widget>
