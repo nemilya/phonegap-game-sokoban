@@ -24,6 +24,7 @@
   function move(direction){
     game.sokoban_move(direction);
     field.innerHTML = game.get_level();
+    return false;
   }
 
 </script>
@@ -31,17 +32,17 @@
 <table>
   <tr>
     <td></td>
-    <td align="center"><button onclick="move('up')" >Up</button></td>
+    <td align="center"><button onClick="move('up')" >Up</button></td>
     <td></td>
   </tr>
   <tr>
-    <td><button onclick="move('left')" >Left</button></td>
+    <td><button onClick="move('left')" >Left</button></td>
     <td align="center"></td>
-    <td><button onclick="move('right')" >Right</button></td>
+    <td><button onClick="move('right')" >Right</button></td>
   </tr>
   <tr>
     <td></td>
-    <td><button onclick="move('down')" >Down</button></td>
+    <td><button onClick="move('down')" >Down</button></td>
     <td></td>
   </tr>
 </table>
