@@ -28,7 +28,7 @@
     return false;
   }
 
-  function restore_level(){
+  function restart_level(){
     game.set_level(initial_level);
     field.innerHTML = game.get_level();
     return false;
@@ -54,7 +54,7 @@
   </tr>
 </table>
 
-<a href="#" onClick="restore_level()">Restore</a>
+<a href="#" onClick="restart_level()">restart</a>
 
 </body>
 </html>
