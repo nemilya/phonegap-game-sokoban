@@ -7,7 +7,7 @@
 
 <h1>CoffeeScript Game Sokoban</h1>
 
-<pre id="level" style="font-family: Courier;">
+<pre id="level" style="font-family: Courier; font-size: 18pt">
  #########
  #  #   .#
  #@$ $   #
@@ -19,10 +19,17 @@
 <script>
   var game = new GameSokoban();
   var field = document.getElementById('level');
-  game.set_level(field.innerHTML);
+  var initial_level = field.innerHTML
+  game.set_level(initial_level);
 
   function move(direction){
     game.sokoban_move(direction);
+    field.innerHTML = game.get_level();
+    return false;
+  }
+
+  function restore_level(){
+    game.set_level(initial_level);
     field.innerHTML = game.get_level();
     return false;
   }
@@ -46,6 +53,8 @@
     <td></td>
   </tr>
 </table>
+
+<a href="#" onClick="restore_level()">Restore</a>
 
 </body>
 </html>
